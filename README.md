@@ -20,8 +20,8 @@ A rudimentary messaging application based on client-server architecture for comm
 
 # Usage
 ```bash
-Run server: java server.java <max_users>
-Run client: java client.java <user_name>
+Run server: java ChatServer.java <max_users>
+Run client: java User.java <user_name>
 ```
 # TODO
 - [ ] Full-Duplex transmission mode
