@@ -9,15 +9,21 @@ A rudimentary messaging application based on client-server architecture for comm
 
 
 # Commands
-- [ ] create chatroom <chatroom_name> **- command to create chatroom**
-- [ ] list chatrooms **- command to list all chat rooms**
-- [ ] join <chatroom_name> **- command to join existing chat room**
-- [ ] leave **-command to leave existing chat room**
-- [ ] list users **-command to list all users in a chatroom**
-- [ ] add <user_name> **-commmand to add another user to chat room**
+- [x] create chatroom <chatroom_name> **- command to create chatroom**
+- [x] list chatrooms **- command to list all chat rooms**
+- [x] join <chatroom_name> **- command to join existing chat room**
+- [x] leave **-command to leave existing chat room**
+- [x] list users **-command to list all users in a chatroom**
+- [x] add <user_name> **-commmand to add another user to chat room**
+- [x] reply <message_content> **-command to send message in a chatroom**
+- [x] reply <file_path> <mode> **- command to send any kind of file in a chatroom through TCP/UDP mode**
 
 # Usage
 ```bash
 Run server: java server.java <max_users>
 Run client: java client.java <user_name>
 ```
+# TODO
+- [ ] Full-Duplex transmission mode
+- [ ] End-to-end Encryption  
+- [ ] GUI for better display
