@@ -1,4 +1,4 @@
-# MessagingApp
+# ChatApp
 A rudimentary messaging application based on client-server architecture for communication amongst multiple connected clients.
 
 # Project Scope
