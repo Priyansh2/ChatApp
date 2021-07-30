@@ -24,6 +24,5 @@ Run server: java ChatServer.java <max_users>
 Run client: java User.java <user_name>
 ```
 # TODO
-- [ ] Full-Duplex transmission mode
-- [ ] End-to-end Encryption  
+- [ ] Full-Duplex transmission mode 
 - [ ] GUI for better display
