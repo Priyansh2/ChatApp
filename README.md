@@ -16,7 +16,7 @@ A rudimentary messaging application based on client-server architecture for comm
 - [x] list users **-command to list all users in a chatroom**
 - [x] add <user_name> **-commmand to add another user to chat room**
 - [x] reply <message_content> **-command to send message in a chatroom**
-- [x] reply <file_path> <mode> **- command to send any kind of file in a chatroom through TCP/UDP mode**
+- [x] reply <file_path> tcp/udp **- command to send any kind of file in a chatroom through TCP/UDP mode**
 
 # Usage
 ```bash
