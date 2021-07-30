@@ -69,6 +69,7 @@ class AcceptClient extends Thread {
             return;
         }
         System.out.println("User "+LoginName+" logged in");
+        //System.out.println(recieve_initial.getPort());
         ChatServer.Ports.add(recieve_initial.getPort()); //add user socket's port
         ChatServer.LoginNames.add(LoginName) ; // add user to username list
         ChatServer.ClientSockets.add(ClientSocket) ;

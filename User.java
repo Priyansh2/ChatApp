@@ -12,10 +12,15 @@ public class User {
     public static void main(String args[])   {
         try
         {
+            if(args.length==0)
+            {
+                System.out.println("No Username given\n");
+                System.exit(0);
+            }
             Socket clientSoc;
             DataInputStream din;
             DataOutputStream dout;
-            String LoginName;
+            String LoginName=args[0];
             clientSocUDP = new DatagramSocket();
             clientSoc = new Socket(ip,6666) ;
             System.out.println("Connected to Server at localhost Port-6666(TCP)");
@@ -27,12 +32,6 @@ public class User {
             DatagramPacket initial = new DatagramPacket(file_contents,file_contents.length,InetAddress.getByName(ip),port); /*For sending a packet via UDP, we should know 4 things, the message to send, its length, ipaddress of destination, port at which destination is listening.*/
             //System.out.println(initial);
             clientSocUDP.send(initial); //send for testing
-            if(args.length==0)
-            {
-                System.out.println("No Username given\n");
-                System.exit(0);
-            }
-            LoginName=args[0];
             dout.writeUTF(LoginName);
 
             //Recieve messages
@@ -90,8 +89,8 @@ public class User {
                                         dout.write(file_contents);
                                         System.out.println("Sending file..."+(current*100/fileLength)+"% complete");
                                     }
-                                    fpin.close()
-                                    bpin.close()
+                                    fpin.close();
+                                    bpin.close();
                                     System.out.println("TCP: Sent file");
                                 }
                                 else if(typ.equals("udp"))
@@ -116,8 +115,8 @@ public class User {
                                         clientSocUDP.send(sendPacket);
                                         System.out.println("Sending file..."+(current*100/fileLength)+"% complete");
                                     }
-                                    fpin.close()
-                                    bpin.close()
+                                    fpin.close();
+                                    bpin.close();
                                     System.out.println("UDP: Sent file");
                                 }
                             }
@@ -186,8 +185,8 @@ class RecievedMessagesHandler implements Runnable {
                             //file_contents = new byte[1000];
                         }
                         bpout.flush();
-                        fpout.close()
-                        bpout.close()
+                        fpout.close();
+                        bpout.close();
                         System.out.println("TCP: Recieved file");
                     }
                     else
@@ -212,8 +211,8 @@ class RecievedMessagesHandler implements Runnable {
                             if(size>fileLength) size=fileLength;
                         }
                         bpout.flush();
-                        fpout.close()
-                        bpout.close()
+                        fpout.close();
+                        bpout.close();
 
                         System.out.println("UDP: Recieved file");
                     }
